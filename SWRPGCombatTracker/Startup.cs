@@ -1,4 +1,5 @@
 ﻿using ElectronNET.API;
+using ElectronNET.API.Entities;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -52,7 +53,11 @@ namespace SWRPGCombatTracker
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
 
-            Task.Run(async () => await Electron.WindowManager.CreateWindowAsync());
+            Task.Run(async () => await Electron.WindowManager.CreateWindowAsync(new BrowserWindowOptions
+            {
+                Show = false
+            }
+                ));
         }
     }
 }
