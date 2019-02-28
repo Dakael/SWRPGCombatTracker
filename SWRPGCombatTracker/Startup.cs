@@ -55,7 +55,6 @@ namespace SWRPGCombatTracker
 
             Task.Run(async () => await Electron.WindowManager.CreateWindowAsync(new BrowserWindowOptions
             {
-                Show = false
             }
                 ));
         }

@@ -10,8 +10,8 @@
   "profiles": {
     "Electron.NET App": {
       "commandName": "Executable",
-      "executablePath": "electronize",
-      "commandLineArgs": " start"
+      "executablePath": "C:\\Program Files\\dotnet\\dotnet.exe",
+      "commandLineArgs": "electronize start"
     },
     "IIS Express": {
       "commandName": "IISExpress",
