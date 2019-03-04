@@ -19,8 +19,7 @@ namespace SWRPGCombatTracker.Models
         public string CharacterName { get; set; }
 
         [Required]
-        [Display(Name = "Critical Injuries")]
-        public int CriticalInjuries { get; set; }
+        public int Credits { get; set; }
 
         [Required]
         public int Cunning { get; set; }
@@ -91,6 +90,16 @@ namespace SWRPGCombatTracker.Models
         [Display(Name = "Wound Threshold")]
         public int WoundThreshold { get; set; }
 
+        public class CriticalInjuries
+        {
+            [Required]
+            public string CriticalInjury { get; set; }
+
+            [Key]
+            [Required]
+            public int Id { get; set; }
+        }
+
         public class IndividualObligations
         {
             [Key]
@@ -121,7 +130,7 @@ namespace SWRPGCombatTracker.Models
         {
             [Key]
             [Required]
-            public int id { get; set; }
+            public int Id { get; set; }
 
             [Required]
             public string Specialization { get; set; }

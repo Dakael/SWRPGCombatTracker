@@ -28,7 +28,7 @@ namespace SWRPGCombatTracker.Migrations
                     Brawn = table.Column<int>(nullable: false),
                     Career = table.Column<string>(nullable: false),
                     CharacterName = table.Column<string>(nullable: false),
-                    CriticalInjuries = table.Column<int>(nullable: false),
+                    Credits = table.Column<int>(nullable: false),
                     Cunning = table.Column<int>(nullable: false),
                     CurrentStrain = table.Column<int>(nullable: false),
                     CurrentWounds = table.Column<int>(nullable: false),
@@ -100,14 +100,14 @@ namespace SWRPGCombatTracker.Migrations
                 name: "Specializations",
                 columns: table => new
                 {
-                    id = table.Column<int>(nullable: false)
+                    Id = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     Specialization = table.Column<string>(nullable: false),
                     PlayerModelID = table.Column<int>(nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Specializations", x => x.id);
+                    table.PrimaryKey("PK_Specializations", x => x.Id);
                     table.ForeignKey(
                         name: "FK_Specializations_Players_PlayerModelID",
                         column: x => x.PlayerModelID,

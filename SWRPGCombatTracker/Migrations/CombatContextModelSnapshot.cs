@@ -45,7 +45,7 @@ namespace SWRPGCombatTracker.Migrations
                     b.Property<string>("CharacterName")
                         .IsRequired();
 
-                    b.Property<int>("CriticalInjuries");
+                    b.Property<int>("Credits");
 
                     b.Property<int>("Cunning");
 
@@ -127,7 +127,7 @@ namespace SWRPGCombatTracker.Migrations
 
             modelBuilder.Entity("SWRPGCombatTracker.Models.PlayerModel+Specializations", b =>
                 {
-                    b.Property<int>("id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
                     b.Property<int?>("PlayerModelID");
@@ -135,7 +135,7 @@ namespace SWRPGCombatTracker.Migrations
                     b.Property<string>("Specialization")
                         .IsRequired();
 
-                    b.HasKey("id");
+                    b.HasKey("Id");
 
                     b.HasIndex("PlayerModelID");
 
