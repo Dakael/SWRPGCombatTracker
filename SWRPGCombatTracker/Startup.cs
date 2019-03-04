@@ -34,6 +34,11 @@ namespace SWRPGCombatTracker
             }
 
             app.UseStaticFiles();
+            using (var serviceScope = app.ApplicationServices.GetService<IServiceScopeFactory>().CreateScope())
+            {
+                var context = serviceScope.ServiceProvider.GetRequiredService<CombatContext>();
+                context.Database.Migrate();
+            }
 
             app.UseMvc(routes =>
             {
