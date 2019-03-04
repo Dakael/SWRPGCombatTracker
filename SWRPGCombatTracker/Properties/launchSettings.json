@@ -10,8 +10,9 @@
   "profiles": {
     "Electron.NET App": {
       "commandName": "Executable",
-      "executablePath": "C:\\Program Files\\dotnet\\dotnet.exe",
-      "commandLineArgs": "electronize start"
+      "executablePath": "C:\\Users\\beams\\.dotnet\\tools\\electronize.exe",
+      "commandLineArgs": "start",
+      "workingDirectory": "C:\\Users\\beams\\Source\\Repos\\Dakael\\SWRPGCombatTracker"
     },
     "IIS Express": {
       "commandName": "IISExpress",
