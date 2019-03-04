@@ -43,7 +43,6 @@ namespace SWRPGCombatTracker.Models
         [Required]
         public int ID { get; set; }
 
-        [Required]
         [Display(Name = "Individual Obligation")]
         public List<IndividualObligations> individualObligations { get; set; }
 
@@ -59,7 +58,6 @@ namespace SWRPGCombatTracker.Models
 
         public int Morality { get; set; }
 
-        [Required]
         [Display(Name = "Party Obligation")]
         public List<PartyObligations> partyObligations { get; set; }
 

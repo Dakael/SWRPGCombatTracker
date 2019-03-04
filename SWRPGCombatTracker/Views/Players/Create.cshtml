@@ -1,0 +1,138 @@
+﻿@model SWRPGCombatTracker.Models.PlayerModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>PlayerModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Agility" class="control-label"></label>
+                <input asp-for="Agility" class="form-control" />
+                <span asp-validation-for="Agility" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Brawn" class="control-label"></label>
+                <input asp-for="Brawn" class="form-control" />
+                <span asp-validation-for="Brawn" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Career" class="control-label"></label>
+                <input asp-for="Career" class="form-control" />
+                <span asp-validation-for="Career" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CharacterName" class="control-label"></label>
+                <input asp-for="CharacterName" class="form-control" />
+                <span asp-validation-for="CharacterName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CriticalInjuries" class="control-label"></label>
+                <input asp-for="CriticalInjuries" class="form-control" />
+                <span asp-validation-for="CriticalInjuries" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cunning" class="control-label"></label>
+                <input asp-for="Cunning" class="form-control" />
+                <span asp-validation-for="Cunning" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CurrentStrain" class="control-label"></label>
+                <input asp-for="CurrentStrain" class="form-control" />
+                <span asp-validation-for="CurrentStrain" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CurrentWounds" class="control-label"></label>
+                <input asp-for="CurrentWounds" class="form-control" />
+                <span asp-validation-for="CurrentWounds" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CurrentXP" class="control-label"></label>
+                <input asp-for="CurrentXP" class="form-control" />
+                <span asp-validation-for="CurrentXP" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Encumberance" class="control-label"></label>
+                <input asp-for="Encumberance" class="form-control" />
+                <span asp-validation-for="Encumberance" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Intellect" class="control-label"></label>
+                <input asp-for="Intellect" class="form-control" />
+                <span asp-validation-for="Intellect" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MaxEncumberance" class="control-label"></label>
+                <input asp-for="MaxEncumberance" class="form-control" />
+                <span asp-validation-for="MaxEncumberance" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MeleeDefense" class="control-label"></label>
+                <input asp-for="MeleeDefense" class="form-control" />
+                <span asp-validation-for="MeleeDefense" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Morality" class="control-label"></label>
+                <input asp-for="Morality" class="form-control" />
+                <span asp-validation-for="Morality" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Presence" class="control-label"></label>
+                <input asp-for="Presence" class="form-control" />
+                <span asp-validation-for="Presence" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RangedDefense" class="control-label"></label>
+                <input asp-for="RangedDefense" class="form-control" />
+                <span asp-validation-for="RangedDefense" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SoakValue" class="control-label"></label>
+                <input asp-for="SoakValue" class="form-control" />
+                <span asp-validation-for="SoakValue" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Species" class="control-label"></label>
+                <input asp-for="Species" class="form-control" />
+                <span asp-validation-for="Species" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StrainThreshold" class="control-label"></label>
+                <input asp-for="StrainThreshold" class="form-control" />
+                <span asp-validation-for="StrainThreshold" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TotalXP" class="control-label"></label>
+                <input asp-for="TotalXP" class="form-control" />
+                <span asp-validation-for="TotalXP" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Willpower" class="control-label"></label>
+                <input asp-for="Willpower" class="form-control" />
+                <span asp-validation-for="Willpower" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WoundThreshold" class="control-label"></label>
+                <input asp-for="WoundThreshold" class="form-control" />
+                <span asp-validation-for="WoundThreshold" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
