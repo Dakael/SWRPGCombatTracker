@@ -1,0 +1,153 @@
+﻿@model SWRPGCombatTracker.Models.PlayerModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>PlayerModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Agility)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Agility)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Brawn)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Brawn)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Career)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Career)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CharacterName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CharacterName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Credits)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Credits)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Cunning)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Cunning)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CurrentStrain)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CurrentStrain)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CurrentWounds)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CurrentWounds)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CurrentXP)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CurrentXP)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Encumberance)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Encumberance)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Intellect)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Intellect)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MaxEncumberance)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MaxEncumberance)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MeleeDefense)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MeleeDefense)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Morality)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Morality)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Presence)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Presence)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.RangedDefense)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.RangedDefense)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SoakValue)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SoakValue)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Species)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Species)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.StrainThreshold)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StrainThreshold)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalXP)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TotalXP)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Willpower)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Willpower)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.WoundThreshold)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.WoundThreshold)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="ID" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>
