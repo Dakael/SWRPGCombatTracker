@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore;
+﻿using ElectronNET.API;
+using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 
 namespace SWRPGCombatTracker
@@ -7,7 +8,7 @@ namespace SWRPGCombatTracker
     {
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                //  .UseElectron(args)
+                .UseElectron(args)
                 .UseStartup<Startup>();
 
         public static void Main(string[] args)

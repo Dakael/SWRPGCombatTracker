@@ -8,7 +8,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using SWRPGCombatTracker.Models;
-using System.Threading.Tasks;
 
 namespace SWRPGCombatTracker
 {
@@ -46,11 +45,23 @@ namespace SWRPGCombatTracker
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
-
-            Task.Run(async () => await Electron.WindowManager.CreateWindowAsync(new BrowserWindowOptions
+            if (HybridSupport.IsElectronActive)
             {
+                ElectronBootStrap();
             }
-                ));
+        }
+
+        private async void ElectronBootStrap()
+        {
+            var browserWindow = await Electron.WindowManager.CreateWindowAsync(new BrowserWindowOptions
+            {
+                AutoHideMenuBar = true,
+                BackgroundColor = "#272b30",
+                Title = "Star Wars RPG Tracker",
+                Show = false
+            }
+                );
+            browserWindow.OnReadyToShow += () => browserWindow.Show();
         }
 
         // This method gets called by the runtime. Use this method to add services to the container.
